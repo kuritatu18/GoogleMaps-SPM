@@ -5,7 +5,7 @@
 //  Copyright 2012 Google LLC
 //
 //  Usage of this SDK is subject to the Google Maps/Google Earth APIs Terms of
-//  Service: https://cloud.google.com/maps-platform/terms
+//  Service: https://developers.google.com/maps/terms
 //
 
 #import <CoreGraphics/CoreGraphics.h>
@@ -59,7 +59,9 @@ typedef struct {
 - (CGFloat)pointsForMeters:(CLLocationDistance)meters
               atCoordinate:(CLLocationCoordinate2D)coordinate;
 
-/** Returns whether a given coordinate (lat/lng) is contained within the projection. */
+/**
+ * Returns whether a given coordinate (lat/lng) is contained within the projection.
+ */
 - (BOOL)containsCoordinate:(CLLocationCoordinate2D)coordinate;
 
 /**

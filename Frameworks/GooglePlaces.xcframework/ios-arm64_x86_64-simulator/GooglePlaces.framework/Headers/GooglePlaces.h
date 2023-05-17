@@ -1,4 +1,3 @@
-#import "GMSAddressComponent.h"
 #import "GMSAutocompleteFetcher.h"
 #import "GMSAutocompleteFilter.h"
 #import "GMSAutocompleteMatchFragment.h"
@@ -7,6 +6,7 @@
 #import "GMSAutocompleteSessionToken.h"
 #import "GMSAutocompleteTableDataSource.h"
 #import "GMSAutocompleteViewController.h"
+#import "GMSAddressComponent.h"
 #import "GMSOpeningHours.h"
 #import "GMSPlace.h"
 #import "GMSPlaceFieldMask.h"

@@ -5,7 +5,7 @@
 //  Copyright 2017 Google LLC
 //
 //  Usage of this SDK is subject to the Google Maps/Google Earth APIs Terms of
-//  Service: https://cloud.google.com/maps-platform/terms
+//  Service: https://developers.google.com/maps/terms
 //
 
 #import <Foundation/Foundation.h>
@@ -23,7 +23,6 @@
 typedef NS_ENUM(NSUInteger, GMSPanoramaSource) {
   /** Panoramas of locations either inside or outside. */
   kGMSPanoramaSourceDefault = 0,
-
   /** Panoramas of locations outside. */
   kGMSPanoramaSourceOutside,
 };

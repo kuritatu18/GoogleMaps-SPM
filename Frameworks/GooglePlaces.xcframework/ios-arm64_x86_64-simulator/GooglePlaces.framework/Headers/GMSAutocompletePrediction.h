@@ -5,8 +5,9 @@
 //  Copyright 2016 Google LLC
 //
 //  Usage of this SDK is subject to the Google Maps/Google Earth APIs Terms of
-//  Service: https://cloud.google.com/maps-platform/terms
+//  Service: https://developers.google.com/maps/terms
 //
+
 
 #import <Foundation/Foundation.h>
 
@@ -28,7 +29,9 @@ extern NSAttributedStringKey const kGMSAutocompleteMatchAttribute;
 extern NSString *const kGMSAutocompleteMatchAttribute;
 #endif
 
-/** This class represents a prediction of a full query based on a partially typed string. */
+/**
+ * This class represents a prediction of a full query based on a partially typed string.
+ */
 @interface GMSAutocompletePrediction : NSObject
 
 /**
@@ -93,7 +96,9 @@ extern NSString *const kGMSAutocompleteMatchAttribute;
  */
 @property(nonatomic, readonly, nullable) NSNumber *distanceMeters;
 
-/** Initializer is not available. */
+/**
+ * Initializer is not available.
+ */
 - (instancetype)init NS_UNAVAILABLE;
 
 @end

@@ -5,7 +5,7 @@
 //  Copyright 2013 Google LLC
 //
 //  Usage of this SDK is subject to the Google Maps/Google Earth APIs Terms of
-//  Service: https://cloud.google.com/maps-platform/terms
+//  Service: https://developers.google.com/maps/terms
 //
 
 #import <CoreLocation/CoreLocation.h>
@@ -94,7 +94,6 @@ typedef NS_ENUM(NSUInteger, GMSLengthKind) {
 
 /**@}*/
 
-/** This category is needed in order to have the declaration of GMSLengthKind after GMSPath. */
 @interface GMSPath (GMSPathLength)
 
 /**
@@ -103,7 +102,9 @@ typedef NS_ENUM(NSUInteger, GMSLengthKind) {
  */
 - (double)segmentsForLength:(CLLocationDistance)length kind:(GMSLengthKind)kind;
 
-/** Returns the length of the path, according to |kind|. See GMSLengthKind. */
+/**
+ * Returns the length of the path, according to |kind|. See GMSLengthKind.
+ */
 - (CLLocationDistance)lengthOfKind:(GMSLengthKind)kind;
 
 @end

@@ -5,7 +5,7 @@
 //  Copyright 2013 Google LLC
 //
 //  Usage of this SDK is subject to the Google Maps/Google Earth APIs Terms of
-//  Service: https://cloud.google.com/maps-platform/terms
+//  Service: https://developers.google.com/maps/terms
 //
 
 #import <UIKit/UIKit.h>
@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Stub tile that is used to indicate that no tile exists for a specific tile coordinate. May be
- * returned by tileForX:y:zoom: on GMSTileOverlay.
+ * returned by tileForX:y:zoom: on GMSTileProvider.
  */
 FOUNDATION_EXTERN UIImage *const kGMSTileLayerNoTile;
 
@@ -57,7 +57,9 @@ FOUNDATION_EXTERN UIImage *const kGMSTileLayerNoTile;
                    zoom:(NSUInteger)zoom
                receiver:(id<GMSTileReceiver>)receiver;
 
-/** Clears the cache so that all tiles will be requested again. */
+/**
+ * Clears the cache so that all tiles will be requested again.
+ */
 - (void)clearTileCache;
 
 /**
@@ -93,7 +95,9 @@ FOUNDATION_EXTERN UIImage *const kGMSTileLayerNoTile;
  */
 @property(nonatomic) float opacity;
 
-/** Specifies whether the tiles should fade in. Default YES. */
+/**
+ * Specifies whether the tiles should fade in. Default YES.
+ */
 @property(nonatomic) BOOL fadeIn;
 
 @end

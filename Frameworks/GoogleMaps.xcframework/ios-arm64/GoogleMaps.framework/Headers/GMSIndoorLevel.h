@@ -5,9 +5,8 @@
 //  Copyright 2013 Google LLC
 //
 //  Usage of this SDK is subject to the Google Maps/Google Earth APIs Terms of
-//  Service: https://cloud.google.com/maps-platform/terms
+//  Service: https://developers.google.com/maps/terms
 //
-
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN

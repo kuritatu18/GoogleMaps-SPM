@@ -5,20 +5,18 @@
 //  Copyright 2016 Google LLC
 //
 //  Usage of this SDK is subject to the Google Maps/Google Earth APIs Terms of
-//  Service: https://cloud.google.com/maps-platform/terms
+//  Service: https://developers.google.com/maps/terms
 //
 
 #import <UIKit/UIKit.h>
 
+#import "GMSAutocompleteFilter.h"
+#import "GMSAutocompletePrediction.h"
+#import "GMSPlace.h"
 #import "GMSPlaceFieldMask.h"
-
-
 #import "GMSPlacesDeprecationUtils.h"
 
-@class GMSAutocompleteFilter;
-@class GMSAutocompletePrediction;
 @class GMSAutocompleteResultsViewController;
-@class GMSPlace;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -124,8 +122,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic, strong, nullable) IBInspectable UIColor *tintColor;
 
 /**
- * Specify individual place details to fetch for object |GMSPlace|. Defaults to returning all
- * details if not overridden.
+ * Specify individual place details to fetch for object |GMSPlace|.
+ * Defaults to returning all details if not overridden.
  */
 @property(nonatomic, assign) GMSPlaceField placeFields;
 

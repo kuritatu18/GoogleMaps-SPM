@@ -5,13 +5,11 @@
 //  Copyright 2016 Google LLC
 //
 //  Usage of this SDK is subject to the Google Maps/Google Earth APIs Terms of
-//  Service: https://cloud.google.com/maps-platform/terms
+//  Service: https://developers.google.com/maps/terms
 //
 
 #import <CoreLocation/CoreLocation.h>
 #import <Foundation/Foundation.h>
-
-#import "GMSPlacesDeprecationUtils.h"
 
 @protocol GMSPlaceLocationBias;
 @protocol GMSPlaceLocationRestriction;
@@ -28,18 +26,22 @@ NS_ASSUME_NONNULL_BEGIN
  * types.
  */
 typedef NS_ENUM(NSInteger, GMSPlacesAutocompleteTypeFilter) {
-  /** All results. */
+  /**
+   * All results.
+   */
   kGMSPlacesAutocompleteTypeFilterNoFilter,
-
-  /** Geocoding results, as opposed to business results. */
+  /**
+   * Geocoding results, as opposed to business results.
+   */
   kGMSPlacesAutocompleteTypeFilterGeocode,
-
-  /** Geocoding results with a precise address. */
+  /**
+   * Geocoding results with a precise address.
+   */
   kGMSPlacesAutocompleteTypeFilterAddress,
-
-  /** Business results. */
+  /**
+   * Business results.
+   */
   kGMSPlacesAutocompleteTypeFilterEstablishment,
-
   /**
    * Results that match the following types:
    * "locality",
@@ -50,7 +52,6 @@ typedef NS_ENUM(NSInteger, GMSPlacesAutocompleteTypeFilter) {
    * "administrative_area_level_2"
    */
   kGMSPlacesAutocompleteTypeFilterRegion,
-
   /**
    * Results that match the following types:
    * "locality",
@@ -68,44 +69,24 @@ typedef NS_ENUM(NSInteger, GMSPlacesAutocompleteTypeFilter) {
 @interface GMSAutocompleteFilter : NSObject
 
 /**
- * DEPRECATED. The type filter applied to an autocomplete request to restrict results to different
- * types. Default value is kGMSPlacesAutocompleteTypeFilterNoFilter.
- *
- * NOTE: Ignored if the "types" property is set.
+ * The type filter applied to an autocomplete request to restrict results to different types.
+ * Default value is kGMSPlacesAutocompleteTypeFilterNoFilter.
  */
-@property(nonatomic, assign)
-    GMSPlacesAutocompleteTypeFilter type __GMS_AVAILABLE_BUT_DEPRECATED_MSG(
-        "<code>type</code> property is deprecated in favor of <code>types</code>.");
+@property(nonatomic, assign) GMSPlacesAutocompleteTypeFilter type;
 
 /**
- * The filter applied to an autocomplete request to restrict results using up to 5 different place
- * types.
+ * The country to restrict results to. This should be a ISO 3166-1 Alpha-2 country code (case
+ * insensitive). If nil, no country filtering will take place.
  *
- * NOTE: This API can take an array of up to 5 entries from <a
- * href="https://developers.google.com/maps/documentation/places/ios-sdk/supported_types#table1">table_1</a>
- * or <a
- * href="https://developers.google.com/maps/documentation/places/ios-sdk/supported_types#table2">table_2</a>,
- * but only a single entry in <a
- * href="https://developers.google.com/maps/documentation/places/ios-sdk/supported_types#table3">table_3</a>.
- * Default value is null, which means no filters specified. Overrides the deprecated "type" property
- * if this is set.
+ * NOTE: Ignored if the countries property is set.
  */
-@property(nonatomic, nullable) NSArray<NSString *> *types;
-
-/**
- * DEPRECATED. The country to restrict results to. This should be a ISO 3166-1 Alpha-2 country code
- * (case insensitive). If nil, no country filtering will take place.
- *
- * NOTE: Ignored if the "countries" property is set.
- */
-@property(nonatomic, copy, nullable) NSString *country __GMS_AVAILABLE_BUT_DEPRECATED_MSG(
-    "<code>country</code> property is deprecated in favor of <code>countries</code>.");
+@property(nonatomic, copy, nullable) NSString *country;
 
 /**
  * The countries to restrict results to. This should be a ISO 3166-1 Alpha-2 country code (case
  * insensitive). Supports up to 5 countries to filter. If nil, no country filtering will take place.
  *
- * NOTE: Overrides the deprecated "country" property if that is set.
+ * NOTE: Overrides the country property if that is set.
  */
 @property(nonatomic, copy, nullable) NSArray<NSString *> *countries;
 
@@ -115,10 +96,14 @@ typedef NS_ENUM(NSInteger, GMSPlacesAutocompleteTypeFilter) {
  */
 @property(nonatomic, nullable) CLLocation *origin;
 
-/** The optional location bias to prefer place results near the location. */
+/**
+ * The optional location bias to prefer place results near the location.
+ */
 @property(nonatomic, nullable) id<GMSPlaceLocationBias> locationBias;
 
-/** The optional location restriction to limit the place results to. */
+/**
+ * The optional location restriction to limit the place results to.
+ */
 @property(nonatomic, nullable) id<GMSPlaceLocationRestriction> locationRestriction;
 
 @end
